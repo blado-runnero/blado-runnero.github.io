@@ -326,35 +326,64 @@ var top3 = res[44];
 var top4 = res[43];
 var top5 = res[42];
 var which_char = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZABDEFGHNQRT"
+var per1,per2,per3,per4,per5;
 result.forEach(function(value, key) {
 	if ( top1 == value ){
   console.log(which_char[key] + ' = ' + value);
+  key1 = key;
 }
 });
 
 result.forEach(function(value, key) {
 	if ( top2 == value ){
   console.log(which_char[key] + ' = ' + value);
+  key2 = key;
 }
 });
 
 result.forEach(function(value, key) {
 	if ( top3 == value ){
   console.log(which_char[key] + ' = ' + value);
+  key3 = key;
 }
 });
 
 result.forEach(function(value, key) {
 	if ( top4 == value ){
   console.log(which_char[key] + ' = ' + value);
+  key4 = key;
 }
 });
 
 result.forEach(function(value, key) {
 	if ( top5 == value ){
   console.log(which_char[key] + ' = ' + value);
+  key5 = key;
 }
 });
 
+var text = "Top 5 predctions ( and percentage )";
+	label = [];
+	var datas = [];
+	datas.push(top1);
+	datas.push(top2);
+	datas.push(top3);
+	datas.push(top4);
+	datas.push(top5);
+	label.push(which_char[key1]);
+	label.push(which_char[key2]);
+	label.push(which_char[key3]);
+	label.push(which_char[key4]);
+	label.push(which_char[key5]);
+	if (firstTime == 0) {
+		loadChart(label, datas, text);
+		firstTime = 1;
+	} else {
+		chart.destroy();
+		loadChart(label, datas, text);
+	}
+	document.getElementById('chart_box').style.display = "block";
+
+	
 
 }

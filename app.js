@@ -382,8 +382,9 @@ var text = "Top 5 predctions ( and percentage )";
 		chart.destroy();
 		loadChart(label, datas, text);
 	}
+	console.log("prediction finished");
 	document.getElementById('chart_box').style.display = "block";
-
+	console.log("chart loaded");
 	
 
 }

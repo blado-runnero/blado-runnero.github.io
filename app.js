@@ -263,8 +263,8 @@ async function predict() {
 	var pass_res = results;
 	displayChart(results);
 
-	console.log(pass_res);
-	console.log("after results");
+	//console.log(pass_res);
+	//console.log("after results");
 }
 
 //------------------------------
@@ -325,34 +325,34 @@ var top2 = res[45];
 var top3 = res[44];
 var top4 = res[43];
 var top5 = res[42];
-
+var which_char = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZABDEFGHNQRT"
 result.forEach(function(value, key) {
 	if ( top1 == value ){
-  console.log(key + ' = ' + value);
+  console.log(which_char[key] + ' = ' + value);
 }
 });
 
 result.forEach(function(value, key) {
 	if ( top2 == value ){
-  console.log(key + ' = ' + value);
+  console.log(which_char[key] + ' = ' + value);
 }
 });
 
 result.forEach(function(value, key) {
 	if ( top3 == value ){
-  console.log(key + ' = ' + value);
+  console.log(which_char[key] + ' = ' + value);
 }
 });
 
 result.forEach(function(value, key) {
 	if ( top4 == value ){
-  console.log(key + ' = ' + value);
+  console.log(which_char[key] + ' = ' + value);
 }
 });
 
 result.forEach(function(value, key) {
 	if ( top5 == value ){
-  console.log(key + ' = ' + value);
+  console.log(which_char[key] + ' = ' + value);
 }
 });
 

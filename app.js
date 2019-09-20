@@ -194,7 +194,7 @@ async function loadModel(modelName) {
   model = undefined;
   
   // load the model using a HTTPS request (where you have stored your model files)
-  model = await tf.loadModel("https://blado-runnero.github.io/model.json");
+  model = await tf.loadLayersModel("https://blado-runnero.github.io/model.json");
   
   console.log("model loaded............................................................................");
 }

@@ -215,7 +215,7 @@ function preprocessCanvas(image, modelName) {
 	else if (modelName === "digitrecognizermlp") {
 		
 		// resize the input image to digitrecognizermlp's target size of (784, )
-		let tensor = tf.fromPixels(image)
+		let tensor = tf.browser.fromPixels(image)
 		    .resizeNearestNeighbor([28, 28])
 		    .mean(2)
 		    .toFloat()
